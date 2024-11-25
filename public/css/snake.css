@@ -1,0 +1,67 @@
+body {
+    font-family: "Courier New", Courier, monospace; /* Font monocromatico retrò */
+    text-align: center;
+    background-color: #1a1a1a; /* Sfondo grigio scuro */
+    color: #c0c0c0; /* Testo grigio chiaro */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 1px;
+    background-color: #2a2a2a; /* Sfondo leggermente più chiaro */
+    border: 2px solid #c0c0c0; /* Bordo grigio chiaro */
+    margin-top: 20px;
+    box-shadow: 0 0 10px #000; /* Effetto retrò */
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    background-color: #2a2a2a; /* Sfondo base */
+}
+
+.snake {
+    background-color: #c0c0c0; /* Grigio chiaro per il serpente */
+}
+
+.food {
+    background-color: #8c8c8c; /* Grigio medio per il cibo */
+}
+
+button {
+    background-color: #4c4c4c; /* Grigio scuro per il pulsante */
+    color: #c0c0c0; /* Testo grigio chiaro */
+    border: 2px solid #c0c0c0; /* Bordo grigio chiaro */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+button:hover {
+    background-color: #6c6c6c; /* Grigio medio per hover */
+    color: #000; /* Testo nero per contrasto */
+}
+
+h1 {
+    font-size: 24px;
+    color: #c0c0c0; /* Stesso grigio chiaro del testo */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #000; /* Effetto retrò */
+}
+
+p {
+    font-size: 18px;
+    color: #a0a0a0; /* Testo grigio leggermente più scuro */
+    margin: 0;
+}
