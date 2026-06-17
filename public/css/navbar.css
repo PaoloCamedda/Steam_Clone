@@ -1,0 +1,240 @@
+/*
+*********************************************************************
+*               NAVBAR CSS                                          *
+*********************************************************************
+*/
+
+#navbar {
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(60deg, #7403fc, #321357);
+}
+
+#navbar a {
+    color: #d0d7e6; /* Testo in grigio chiaro con un tocco di blu */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#navbar a:hover {
+    background-color: #2b4a8a; /* Sfondo blu più scuro */
+    color: #ffffff; /* Testo bianco */
+    border-radius: 20px; /* Arrotonda i bordi per creare un effetto ovale */
+    padding: 10px 20px; /* Aggiunge più spazio orizzontale per enfatizzare la forma ovale */
+    transition: all 0.3s ease-in-out; /* Aggiunge una transizione per rendere il cambiamento più fluido */
+}
+
+.navbar {
+    background: linear-gradient(60deg, #1a3e75, #122b54); /* Gradiente coordinato con il navbar hover */
+    font-family: 'Courier New', monospace;
+    color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+    color: #d0d7e6; /* Testo simile ai link per uniformità */
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    border: 2px solid #ffffff; /* Mantiene lo stile del bordo coerente */
+}
+
+.nav-link {
+    color: #d0d7e6; /* Colore dei link simile al testo normale */
+    font-weight: bold;
+}
+
+/*
+*********************************************************************
+*              MODALE NAVBAR CSS                                    *
+*********************************************************************
+*/
+/* Stile base per i modali */
+.modal {
+    display: none; /* Nascosto di default */
+    position: fixed; /* Posizionato rispetto alla finestra */
+    z-index: 1050; /* In primo piano */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Abilita lo scrolling se necessario */
+    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
+}
+
+/* Contenuto del modale */
+.modal-content {
+    background-color: #2c3e50; /* Sfondo blu-grigio elegante */
+    margin: 10% auto; /* Centra verticalmente */
+    padding: 20px;
+    border-radius: 15px; /* Angoli arrotondati più pronunciati */
+    width: 90%; /* Larghezza modale */
+    max-width: 400px; /* Larghezza massima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombra più accentuata */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #ecf0f1; /* Testo chiaro */
+}
+
+/* Pulsante di chiusura */
+.close-btn, .close-btn-logout {
+    color: #ec0000;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.close-btn:hover, .close-btn-logout:hover {
+    color: rgba(0, 0, 0, 0.58);
+}
+
+/* Stile per il form */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spazio tra gli elementi */
+}
+
+.modal-content label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #bdc3c7; /* Grigio chiaro per il testo delle etichette */
+    text-align: left;
+}
+
+.modal-content input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #34495e; /* Blu-grigio scuro per i bordi */
+    border-radius: 5px;
+    outline: none;
+    background-color: #34495e; /* Sfondo input abbinato */
+    color: #ecf0f1; /* Testo chiaro */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.modal-content input:focus {
+    border-color: #3498db; /* Cambia colore del bordo quando in focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Pulsanti */
+.modal-content button {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    color: #ecf0f1; /* Testo chiaro */
+}
+
+.modal-content button#login-button {
+    background-color: #2980b9; /* Blu per login */
+}
+
+.modal-content button#login-button:hover {
+    background-color: #1f618d;
+}
+
+.modal-content button[type="submit"] {
+    background-color: #2980b9; /* Verde per registrazione */
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #1f618d;
+}
+
+.modal-content .btn-danger {
+    background-color: #730e03; /* Rosso per logout */
+}
+
+.modal-content .btn-danger:hover {
+    background-color: #4d0902;
+}
+
+.modal-content .btn-secondary {
+    background-color: #7f8c8d; /* Grigio secondario */
+}
+
+.modal-content .btn-secondary:hover {
+    background-color: #616a6b;
+}
+
+/* Pulsanti per logout */
+#logout-modal .btn {
+    margin: 5px;
+}
+
+/* Stile per il titolo "Login" */
+#login-modal h2 {
+    color: #3498db; /* Blu chiaro */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Stile per il titolo "Singin" */
+#login-modal h2:nth-of-type(2) {
+    color: #3078f6; /* Verde brillante */
+}
+
+/* Stile per "Are you sure you want to logout?" */
+#logout-modal h2 {
+    color: #c53020; /* Rosso acceso */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/************************************************************
+*               MEDIA QUERY                                 *
+ ************************************************************
+ */
+@media (max-width: 300px) {
+    #navbar {
+        padding: 5px;
+        text-align: center;
+    }
+
+    #navbar a {
+        padding: 5px 10px; /* Riduce il padding per adattarsi a schermi piccoli */
+        font-size: 14px; /* Riduce leggermente la dimensione del testo */
+    }
+
+    .navbar {
+        flex-direction: column; /* Dispone gli elementi in colonna */
+    }
+
+    .navbar-brand {
+        text-align: center;
+        margin-bottom: 10px; /* Aggiunge spazio tra il brand e i link */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Dispone i link in colonna */
+        align-items: center; /* Centra i link */
+    }
+
+    .nav-item {
+        margin-bottom: 5px; /* Aggiunge spazio tra i link */
+    }
+
+    .modal-content {
+        width: 95%; /* Adatta i modali a schermi stretti */
+        max-width: 350px;
+    }
+}
+
+

@@ -1,0 +1,117 @@
+/* *******************************************************************
+ *              GRID LAYOUT GENERALE                                 *
+ ******************************************************************** */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Colonna unica per il profilo */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* Centra il contenuto */
+}
+
+#profile-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: #34495e; /* Blu-grigio */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #d0d7e6;
+    text-align: center;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-profile {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+h1#username, p#mail, h3#name, h3#lastname {
+    margin: 10px 0;
+}
+
+#edit-button {
+    margin-top: 15px;
+    background-color: #2980b9;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#edit-button:hover {
+    background-color: #3498db;
+}
+
+#profile-edit-form {
+    display: none;
+    grid-column: 1 / -1;
+    gap: 10px;
+    padding: 20px;
+    background-color: #34495e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #d0d7e6;
+    text-align: left;
+}
+
+#profile-edit-form .form-label {
+    color: #d0d7e6;
+}
+
+#profile-edit-form input {
+    background-color: #2980b9;
+    color: #d0d7e6;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#profile-edit-form button {
+    background-color: #2980b9;
+    border: none;
+    padding: 10px 20px;
+    color: #d0d7e6;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#profile-edit-form button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+#profile-edit-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+/* *******************************************************************
+ *              MEDIA QUERY                                          *
+ ******************************************************************** */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Disposizione a colonna singola */
+    }
+
+    #profile-container {
+        padding: 15px;
+    }
+
+    #profile-edit-form {
+        width: 100%;
+    }
+}

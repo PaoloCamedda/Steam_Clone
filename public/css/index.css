@@ -1,4 +1,212 @@
-#imgSnake {
-    width: 50px;
+/* *******************************************************************
+ *              GRID LAYOUT GENERALE                                 *
+ ******************************************************************** */
 
+
+
+main.container {
+    display: grid;
+    grid-template-columns: 3fr -1fr; /* Colonna giochi e barra filtri */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* *******************************************************************
+ *              GIOCHI (SEZIONE SINISTRA)                            *
+ ******************************************************************** */
+#games-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+#games-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#games-table thead h1 {
+    color: #2980b9; /* Blu brillante */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#games-table td, #games-table th {
+    border: 1px solid #34495e; /* Bordo blu-grigio */
+    padding: 10px;
+    text-align: left;
+}
+
+#games-table tbody tr {
+    background-color: #2c3e50; /* Blu-grigio */
+    transition: background-color 0.3s ease;
+}
+
+#games-table tbody tr:hover {
+    background-color: #2980b9; /* Blu brillante */
+    color: #ffffff; /* Testo bianco */
+    cursor: pointer;
+}
+
+#games-table tbody tr:hover td {
+    background-color: inherit; /* Eredita lo sfondo della riga */
+    color: inherit; /* Eredita il colore del testo della riga */
+}
+
+#games-table td {
+    width: 25%; /* Imposta la larghezza della cella. Modifica in base alle tue necessità */
+    padding: 5px;
+    text-align: center;
+}
+#games-table img {
+    width: 60%; /* L'immagine prende tutta la larghezza della cella */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+}
+/* *******************************************************************
+ *              FILTRI (SEZIONE DESTRA)                              *
+ ******************************************************************** */
+.list-group-item {
+    background-color: #2c3e50; /* Blu-grigio */
+    color: #d0d7e6;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #2980b9; /* Blu brillante */
+    color: #ffffff;
+    transform: scale(1.05); /* Leggero ingrandimento */
+    cursor: pointer;
+}
+
+.list-group-item.dropdown-toggle {
+    background-color: #1a3e75; /* Blu scuro */
+    border: 1px solid #2980b9;
+}
+
+.dropdown-menu {
+    background-color: #34495e; /* Blu-grigio più scuro */
+    border-radius: 5px;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #d0d7e6;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #2980b9; /* Blu brillante */
+    color: #ffffff;
+}
+
+/* *******************************************************************
+ *              SNAKE CARD                                           *
+ ******************************************************************** */
+#game-card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #34495e; /* Colore di sfondo blu-grigio, uniforme con il resto */
+    border-radius: 15px; /* Bordo arrotondato */
+    border: 3px solid #2980b9; /* Bordo blu brillante */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra delicata per dare profondità */
+    text-align: center; /* Allineamento centrale per tutti gli elementi */
+    color: #d0d7e6; /* Colore del testo chiaro per coerenza con il tema */
+}
+
+#imgSnake {
+    width: 80px; /* Regoliamo la larghezza per renderla più uniforme */
+    height: auto;
+    margin-bottom: 15px; /* Spazio tra l'immagine e il nome */
+    border: 3px solid #2980b9; /* Bordo blu brillante per l'immagine */
+    border-radius: 10px; /* Bordo arrotondato per l'immagine */
+    padding: 5px; /* Padding interno per distanziare l'immagine dal bordo */
+}
+
+#name {
+    margin-bottom: 15px; /* Spazio tra il nome e il pulsante */
+    font-size: 1.5rem; /* Aumentiamo la dimensione del font */
+    font-weight: bold; /* Rendi il nome più prominente */
+    color: #ffffff; /* Colore bianco per il nome */
+}
+
+#playSnake {
+    margin-top: 10px;
+    padding: 10px 20px; /* Aggiungiamo un po' di padding per rendere il bottone più grande */
+    font-size: 1rem; /* Impostiamo una dimensione del font leggibile */
+    border-radius: 50px; /* Bordo arrotondato per il bottone */
+    background-color: #2980b9; /* Colore blu per il pulsante */
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuoviamo il bordo predefinito */
+    cursor: pointer; /* Indicatore di cursore per il clic */
+    transition: all 0.3s ease; /* Transizione fluida per gli effetti hover */
+}
+
+#playSnake:hover {
+    background-color: #3498db; /* Blu più chiaro al passaggio del mouse */
+    transform: translateY(-2px); /* Leggero sollevamento al passaggio del mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombra più forte durante l'hover */
+}
+
+#game-card button:focus {
+    outline: none; /* Rimuoviamo il contorno quando il pulsante è selezionato */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); /* Aggiungiamo un contorno blu in caso di focus */
+}
+
+/* *******************************************************************
+ *              FORM DI RICERCA                                      *
+ ******************************************************************** */
+.custom-form-control {
+    /* Stile personalizzato per l'input */
+    border: 1px solid #2980b9 !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    background-color: #2980b9 !important;
+    color: #d0d7e6 !important;
+    font-size: 1rem !important;
+    transition: border-color 0.2s ease, box-shadow 0.3s ease !important;
+    width: 100% !important;
+    max-width: 250px;
+}
+
+/* Stile per la sezione di ricerca */
+.search-section form.d-flex {
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px !important;
+    background-color: #34495e !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    width: 100%;
+}
+
+
+
+
+
+/* *******************************************************************
+ *              MEDIA QUERY                                          *
+ ******************************************************************** */
+@media (max-width: 768px) {
+    main.container {
+        grid-template-columns: 1fr; /* Disposizione a colonna singola */
+    }
+
+    #games-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    form.d-flex {
+        flex-direction: column; /* Cambia la disposizione degli elementi in colonna */
+        align-items: stretch; /* Allinea gli elementi in modo che occupino tutta la larghezza */
+    }
+
+    form input, form button {
+        width: 100% !important; /* Assicurati che input e button occupino tutta la larghezza */
+        max-width: 100%; /* Nessuna larghezza massima */
+    }
 }

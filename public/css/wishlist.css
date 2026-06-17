@@ -1,0 +1,122 @@
+/* *******************************************************************
+ *              GRID LAYOUT GENERALE                                 *
+ ******************************************************************** */
+
+main {
+    padding: 20px;
+}
+
+/* Contenitore wishlist */
+#wish-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Griglia responsive */
+    gap: 10px; /* Spazio ridotto tra le carte */
+    padding: 15px; /* Ridotto il padding interno */
+    background-color: #0a47b0; /* Sfondo blu-grigio */
+    border-radius: 10px; /* Bordo arrotondato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra delicata */
+}
+
+/* Stile delle carte */
+.game-item .card {
+    background-color: #34495e; /* Blu-grigio */
+    border: 1px solid #2980b9; /* Bordo blu brillante */
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s; /* Transizioni fluide */
+    cursor: pointer; /* Cambia l'icona del mouse in cliccabile */
+    margin: 5px; /* Ridotto il margine esterno */
+}
+
+/* Effetto hover sulle carte */
+.game-item .card:hover {
+    transform: translateY(-2px); /* Leggero sollevamento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+}
+
+/* Immagini delle carte */
+.game-item .card-img-top {
+    width: 100%; /* Adatta l'immagine alla larghezza della carta */
+    height: auto; /* Mantiene il rapporto d'aspetto */
+    border-radius: 8px 8px 0 0; /* Angoli arrotondati solo sopra */
+}
+
+/* Testo e pulsanti */
+.game-item .card-body {
+    color: #d0d7e6;
+}
+
+.game-item .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.game-item .card-text {
+    font-size: 1rem;
+    color: #bdc3c7; /* Grigio per il testo secondario */
+}
+
+.game-item .btn-remove {
+    margin-top: 10px;
+}
+
+/* *******************************************************************
+ *              SEZIONE PREFERITI (WISHLIST)                         *
+ ******************************************************************** */
+.wishlist-item {
+    background-color: #34495e; /* Blu-grigio */
+    border: 1px solid #2980b9; /* Bordo blu brillante */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px; /* Spazio ridotto tra gli elementi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer; /* Cambia il cursore al passaggio */
+}
+
+.wishlist-item:hover {
+    transform: translateY(-2px); /* Sollevamento leggero */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+}
+
+/* Immagini wishlist */
+.wishlist-item img {
+    width: 100px; /* Larghezza fissa per l'immagine */
+    height: auto;
+    border-radius: 8px; /* Bordo arrotondato */
+}
+
+/* Informazioni sui giochi */
+.wishlist-item .game-info {
+    color: #d0d7e6;
+}
+
+.wishlist-item .game-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.wishlist-item .game-info p {
+    font-size: 1rem;
+    color: #bdc3c7; /* Colore grigio per il testo secondario */
+}
+
+/* *******************************************************************
+ *              MEDIA QUERY                                          *
+ ******************************************************************** */
+@media (max-width: 768px) {
+    form.d-flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input, form button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #wish-container {
+        grid-template-columns: 1fr; /* Una colonna per schermi piccoli */
+    }
+}

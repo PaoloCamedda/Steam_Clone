@@ -1,0 +1,103 @@
+/* *******************************************************************
+ *              CONTAINER PRINCIPALE                                 *
+ ******************************************************************** */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Layout di default per mobile */
+    gap: 20px;
+    padding: 20px;
+    background-color: #34495e; /* Blu-grigio uniforme con il resto */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra delicata */
+    max-width: 900px;
+    margin: auto;
+    color: #d0d7e6; /* Testo chiaro */
+}
+
+/* *******************************************************************
+ *              TITOLO DEL GIOCO                                     *
+ ******************************************************************** */
+
+h1#game-name {
+    color: #2980b9; /* Blu brillante */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* *******************************************************************
+ *              IMMAGINE DEL GIOCO                                   *
+ ******************************************************************** */
+
+#game-image {
+    justify-self: center; /* Centra l'immagine nella griglia */
+    width: 80%; /* Adatta larghezza */
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #2980b9; /* Bordo blu brillante */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra delicata */
+}
+
+/* *******************************************************************
+ *              DETTAGLI DEL GIOCO                                   *
+ ******************************************************************** */
+
+.details-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne per i dettagli */
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.details-row p {
+    margin: 0;
+    padding: 5px;
+}
+
+.details-row strong {
+    color: #2980b9; /* Blu brillante per le etichette */
+}
+
+/* Pulsante preferiti */
+#favorite {
+    grid-column: 1 / -1; /* Occupa tutta la larghezza */
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#favorite:hover {
+    background-color: #3498db;
+    transform: translateY(-2px); /* Leggero sollevamento */
+    cursor: pointer;
+}
+
+/* *******************************************************************
+ *              RESPONSIVE DESIGN                                    *
+ ******************************************************************** */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .details-row {
+        grid-template-columns: 1fr; /* Una colonna su schermi piccoli */
+    }
+
+    #game-image {
+        width: 100%; /* L'immagine occupa tutta la larghezza */
+    }
+
+    #favorite {
+        width: 100%; /* Pulsante a larghezza intera */
+    }
+}

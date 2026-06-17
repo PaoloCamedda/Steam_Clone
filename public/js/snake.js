@@ -88,7 +88,10 @@ function moveSnake() {
     }
 }
 
-// Gestisce gli input da tastiera
+/**
+ * requisito
+ * gestione keybord event effetuato qui
+ */
 window.addEventListener('keydown', event => {
     switch (event.key) {
         case 'ArrowUp':
